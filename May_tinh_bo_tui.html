@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính Bỏ Túi</title>
+    <link rel="stylesheet" href="../Ung_Dung_May_tinh/style.css">
+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4"><input type="text" id="input"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="getInput(1)"></td>
+            <td><input type="button" value="2" onclick="getInput(2)"></td>
+            <td><input type="button" value="3" onclick="getInput(3)"></td>
+            <td><input type="button" value="+" onclick="getInput('+')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="getInput(4)"></td>
+            <td><input type="button" value="5" onclick="getInput(5)"></td>
+            <td><input type="button" value="6" onclick="getInput(6)"></td>
+            <td><input type="button" value="-" onclick="getInput('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="getInput(7)"></td>
+            <td><input type="button" value="8" onclick="getInput(8)"></td>
+            <td><input type="button" value="9" onclick="getInput(9)"></td>
+            <td><input type="button" value="*" onclick="getInput('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="getInput(0)"></td>
+            <td><input type="button" value="/" onclick="getInput('/')"></td>
+            <td><input type="button" value="=" onclick="showMessage()"></td>
+            <td><input type="button" value="C" onclick="deleteInput()"></td>
+        </tr>
+    </table>
+<script>
+
+     function getInput(value) {
+
+            document.getElementById("input").value += value;
+     }
+     function showMessage() {
+        let input = document.getElementById("input").value;
+         result = eval(input);
+       //  eval() là phương thức trong js
+       document.getElementById("input").value = result;
+     }
+     function deleteInput() {
+        document.getElementById("input").value = "";
+
+     }
+
+
+</script>
+</body>
+</html>
